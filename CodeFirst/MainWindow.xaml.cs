@@ -26,110 +26,129 @@ namespace CodeFirst
         public MainWindow()
         {
             InitializeComponent();
-           
-                //context.Database.CreateIfNotExists();
-                #region CategoryAdd
-                //context.Categories.Add(new Category
-                //{
-                //    Name = "Adventure"
 
-                //});
-                //context.Categories.Add(new Category
-                //{
-                //    Name = "Science"
+            context.Database.CreateIfNotExists();
+            #region CategoryAdd
+            //context.Categories.Add(new Category
+            //{
+            //    Name = "Adventure"
 
-                //});
-                //context.Categories.Add(new Category
-                //{
-                //    Name = "Programming"
+            //});
+            //context.Categories.Add(new Category
+            //{
+            //    Name = "Science"
 
-                //});
-                //context.SaveChanges();
-                #endregion
+            //});
+            //context.Categories.Add(new Category
+            //{
+            //    Name = "Programming"
 
-                #region AuthorAdd
-                //context.Authors.Add(new Author
-                //{
-                //     Firstname="Linus",
-                //     Lastname="Torvalds",
-                //      Age=35
-                //});
-                //context.Authors.Add(new Author
-                //{
-                //    Firstname = "Leyla",
-                //    Lastname = "Mammadova",
-                //    Age = 22
-                //});
-                //context.Authors.Add(new Author
-                //{
-                //    Firstname = "Axmed",
-                //    Lastname = "Axmedli",
-                //    Age = 18
-                //});
-                //context.SaveChanges();
-                #endregion
+            //});
+            //context.SaveChanges();
+            #endregion
 
-                #region BookAdd
-                //context.Books.Add(new Book
-                //{
-                //     AuthorId=1,
-                //      CategoryId=1,
-                //       Name="C++ Programming",
-                //        Pages=750
-                //});
-                //context.Books.Add(new Book
-                //{
-                //    AuthorId = 2,
-                //    CategoryId = 1,
-                //    Name = "C# Programming",
-                //    Pages = 1200
-                //});
-                //context.Books.Add(new Book
-                //{
-                //    AuthorId = 1,
-                //    CategoryId = 2,
-                //    Name = "Rich Dad Poor Dad",
-                //    Pages = 200
-                //});
-                //context.Books.Add(new Book
-                //{
-                //    AuthorId = 2,
-                //    CategoryId = 2,
-                //    Name = "My Best Book",
-                //    Pages = 750
-                //});
-                //context.Books.Add(new Book
-                //{
-                //    AuthorId = 2,
-                //    CategoryId = 3,
-                //    Name = "Clean Code",
-                //    Pages = 750
-                //});
-                //context.Books.Add(new Book
-                //{
-                //    AuthorId = 3,
-                //    CategoryId = 2,
-                //    Name = "Design Patterns",
-                //    Pages = 750
-                //});
+            #region AuthorAdd
+            //context.Authors.Add(new Author
+            //{
+            //    Firstname = "Linus",
+            //    Lastname = "Torvalds",
+            //    Age = 35
+            //});
+            //context.Authors.Add(new Author
+            //{
+            //    Firstname = "Leyla",
+            //    Lastname = "Mammadova",
+            //    Age = 22
+            //});
+            //context.Authors.Add(new Author
+            //{
+            //    Firstname = "Axmed",
+            //    Lastname = "Axmedli",
+            //    Age = 18
+            //});
+            //context.SaveChanges();
+            #endregion
 
-                //context.SaveChanges();
-                #endregion
-                var categories = context.Categories.ToList();         
+            #region BookAdd
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 1,
+            //    CategoryId = 1,
+            //    Name = "C++ Programming",
+            //    Pages = 750
+            //});
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 2,
+            //    CategoryId = 1,
+            //    Name = "C# Programming",
+            //    Pages = 1200
+            //});
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 1,
+            //    CategoryId = 2,
+            //    Name = "Rich Dad Poor Dad",
+            //    Pages = 200
+            //});
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 2,
+            //    CategoryId = 2,
+            //    Name = "My Best Book",
+            //    Pages = 750
+            //});
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 2,
+            //    CategoryId = 3,
+            //    Name = "Clean Code",
+            //    Pages = 750
+            //});
+            //context.Books.Add(new Book
+            //{
+            //    AuthorId = 3,
+            //    CategoryId = 2,
+            //    Name = "Design Patterns",
+            //    Pages = 750
+            //});
+
+            //context.SaveChanges();
+            #endregion
+
+            //context.Books.Add(new Book
+            //{
+            //     AuthorId=2,
+            //      CategoryId=2,
+            //       Pages=100,
+            //       Name="MyBestBest Book"
+            //});
+            //context.SaveChanges();
+            context.Categories.Add(new Category
+            {
+                 Name="Okayyy"
+            });
+            context.SaveChanges();
+
+
+            var categories = context.Categories.ToList();         
                 categoryDataGrid.ItemsSource = categories;
-                //var authors = context.Authors.ToList();
-                //authorDataGrid.ItemsSource = authors;
-                //var books = context.Books.ToList();
-                //bookDataGrid.ItemsSource = books;
-            
+            var authors = context.Authors.ToList();
+            authorDataGrid.ItemsSource = authors;
+            var books = context.Books.ToList();
+            bookDataGrid.ItemsSource = books;
+
         }
 
        
         private void categoryDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var item = categoryDataGrid.SelectedItem as Category;
+            if (item != null)
+            {
             var books = item.Books.ToList();
             bookDataGrid.ItemsSource = books;
+            }
 
         }
 

@@ -83,17 +83,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202110181129457_InitialCreate.cs" />
-    <Compile Include="Migrations\202110181129457_InitialCreate.designer.cs">
-      <DependentUpon>202110181129457_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202110181253308_Init.cs" />
+    <Compile Include="Migrations\202110181253308_Init.designer.cs">
+      <DependentUpon>202110181253308_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110181159148_Init.cs" />
-    <Compile Include="Migrations\202110181159148_Init.designer.cs">
-      <DependentUpon>202110181159148_Init.cs</DependentUpon>
+    <Compile Include="Migrations\202110181302230_Init5.cs" />
+    <Compile Include="Migrations\202110181302230_Init5.designer.cs">
+      <DependentUpon>202110181302230_Init5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110181204353_Update2.cs" />
-    <Compile Include="Migrations\202110181204353_Update2.designer.cs">
-      <DependentUpon>202110181204353_Update2.cs</DependentUpon>
+    <Compile Include="Migrations\202110181306591_Init6.cs" />
+    <Compile Include="Migrations\202110181306591_Init6.designer.cs">
+      <DependentUpon>202110181306591_Init6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -109,14 +109,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202110181129457_InitialCreate.resx">
-      <DependentUpon>202110181129457_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110181253308_Init.resx">
+      <DependentUpon>202110181253308_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110181159148_Init.resx">
-      <DependentUpon>202110181159148_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110181302230_Init5.resx">
+      <DependentUpon>202110181302230_Init5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110181204353_Update2.resx">
-      <DependentUpon>202110181204353_Update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110181306591_Init6.resx">
+      <DependentUpon>202110181306591_Init6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

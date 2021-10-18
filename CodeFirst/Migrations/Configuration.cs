@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CodeFirst.DataAccess.LibraryContext";
         }
 
         protected override void Seed(CodeFirst.DataAccess.LibraryContext context)

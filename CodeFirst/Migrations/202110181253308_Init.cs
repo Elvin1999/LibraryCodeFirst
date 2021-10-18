@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Init : DbMigration
     {
         public override void Up()
         {
@@ -38,10 +38,10 @@
                 "dbo.Categories",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Identity = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Identity);
             
         }
         
